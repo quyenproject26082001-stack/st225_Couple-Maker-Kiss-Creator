@@ -171,8 +171,8 @@
     <string name="pride_max_colors_reached">Maksimal 10 warna diizinkan</string>
     <string name="my_pride">Pride Saya</string>
     <string name="play">MAIN</string>
-    <string name="lucki_roll">LUCKY ROLL</string>
-    <string name="quick_mix">CAMPURAN CEPAT</string>
+    <string name="tv_cosplay">LUCKY ROLL</string>
+    <string name="random">CAMPURAN CEPAT</string>
     <string name="creation">KREASI</string>
     <string name="back">KEMBALI</string>
     <string name="hello_world_hint">Halo Dunia !!</string>

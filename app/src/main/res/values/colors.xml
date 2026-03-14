@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFFFF</color>
-    <color name="app">#101B94</color>
+    <color name="app">#861629</color>
     <color name="black">#000000</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="orange_F6">#F68300</color>
@@ -47,5 +47,5 @@
     <color name="purple_text">#470092</color>
 
     <color name="pride_btn_inactive">#B3B3B3</color>
-    <color name="pride_btn_active">#4EABDA</color>
+    <color name="pride_btn_active">#861629</color>
 </resources>

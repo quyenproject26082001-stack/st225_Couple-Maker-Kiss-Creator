@@ -4,5 +4,5 @@
     <item android:state_selected="true" android:drawable="@drawable/bg_language_selected" />
 
     <!-- Normal state -->
-    <item android:drawable="@drawable/bg_language_normal" />
+    <item android:drawable="@drawable/bg_language_selected" />
 </selector>

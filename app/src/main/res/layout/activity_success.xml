@@ -36,7 +36,7 @@
         app:strokeWidth="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar"
-        app:strokeColor="#4EABDA"
+        app:strokeColor="#861629"
         app:cardCornerRadius="4dp"
         >
 

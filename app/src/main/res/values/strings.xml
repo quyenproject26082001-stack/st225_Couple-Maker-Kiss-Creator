@@ -173,9 +173,9 @@
     <string name="pride_select_at_least_one">Please select at least one flag</string>
     <string name="pride_max_colors_reached">Maximum 10 colors allowed</string>
     <string name="my_pride">My Pride</string>
-    <string name="play">PLAY</string>
-    <string name="lucki_roll">LUCKY ROLL</string>
-    <string name="quick_mix">QUICK MIX</string>
+    <string name="play">COUPLE \nMAKER</string>
+    <string name="tv_cosplay">COSPLAY</string>
+    <string name="random">RANDOM</string>
     <string name="creation">CREATION</string>
     <string name="back">BACK</string>
     <string name="hello_world_hint">Hello World !!</string>

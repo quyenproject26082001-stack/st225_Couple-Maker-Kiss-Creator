@@ -54,9 +54,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun viewListener() {
         binding.apply {
             btnSettings.tap(800) { startIntentRightToLeft(SettingsActivity::class.java) }
-            btnLuckiRoll.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
+            btnCosPlay.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
             btnMyCreation.tap(800) { showInterAll { startIntentRightToLeft(MyCreationActivity::class.java) } }
-           btnQuickMix.tap(800) { showInterAll {startIntentRightToLeft(RandomCharacterActivity::class.java) }}
+           btnRandom.tap(800) { showInterAll {startIntentRightToLeft(RandomCharacterActivity::class.java) }}
             btnPlay.tap(800) { startIntentRightToLeft(com.temp.ui.choose_character.ChooseCharacterActivity::class.java) }
 
         }
@@ -110,8 +110,8 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     private fun updateText() {
         binding.apply {
             tv1.text = strings(R.string.play)
-            tv2.text = strings(R.string.lucki_roll)
-            tv3.text = strings(R.string.quick_mix)
+            tv2.text = strings(R.string.tv_cosplay)
+            tv3.text = strings(R.string.random)
             tv4.text = strings(R.string.creation)
         }
     }
@@ -135,14 +135,14 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     private fun startStaggeredAnimations() {
         // Card 1: Slide from right (no delay)
         val slideFromRight1 = AnimationUtils.loadAnimation(this, R.anim.slide_in_right_home)
-        binding.btnLuckiRoll.startAnimation(slideFromRight1)
+        binding.btnCosPlay.startAnimation(slideFromRight1)
         binding.tv1.startAnimation(slideFromRight1)
 
 
         // Card 2: Slide from left (200ms delay)
         val slideFromLeft = AnimationUtils.loadAnimation(this, R.anim.slide_in_left_home)
-        binding.btnQuickMix.postDelayed({
-            binding.btnQuickMix.startAnimation(slideFromLeft)
+        binding.btnRandom.postDelayed({
+            binding.btnRandom.startAnimation(slideFromLeft)
             binding.tv2.startAnimation(slideFromLeft)
         }, 200)
 

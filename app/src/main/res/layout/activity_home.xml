@@ -15,11 +15,11 @@
 
 
     <ImageView
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/ic_settings"
+        android:src="@drawable/ic_setting"
         android:scaleType="fitXY"
         android:layout_marginEnd="16dp"
         android:visibility="visible"
@@ -72,10 +72,9 @@
             <!--            tv1-->
 
 
-            <!--            btnLuckiRoll-->
+            <!--            btnCosPlay-->
             <com.temp.core.custom.text.DoubleStrokeTextView
                 android:id="@+id/tv1"
-                style="@style/single_marquee"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:fontFamily="@font/cherry_bomb_regular"
@@ -85,18 +84,18 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="0dp"
                 android:textColor="@color/white"
-                android:textSize="51sp"
+                android:textSize="32sp"
                 app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
                 app:layout_constraintEnd_toEndOf="@+id/glOverEnd"
                 app:layout_constraintStart_toStartOf="@id/glOverStart"
                 app:layout_constraintTop_toTopOf="@+id/btnPlay"
                 app:layout_constraintVertical_bias="0.0"
 
-                app:outerStrokeColor="#166086"
-                app:outerStrokeWidth="6dp" />
+                app:outerStrokeColor="#861629"
+                app:outerStrokeWidth="3dp" />
 
             <ImageView
-                android:id="@+id/btnLuckiRoll"
+                android:id="@+id/btnCosPlay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="16dp"
@@ -113,29 +112,29 @@
                 android:layout_height="0dp"
                 android:fontFamily="@font/cherry_bomb_regular"
                 android:gravity="center"
-                android:text="@string/lucki_roll"
+                android:text="@string/tv_cosplay"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="30dp"
-                app:layout_constraintBottom_toBottomOf="@+id/btnLuckiRoll"
+                app:layout_constraintBottom_toBottomOf="@+id/btnCosPlay"
                 app:layout_constraintStart_toEndOf="@id/glOverStart"
-                app:layout_constraintTop_toTopOf="@+id/btnLuckiRoll"
-                app:outerStrokeColor="#166086"
-                app:outerStrokeWidth="4dp" />
+                app:layout_constraintTop_toTopOf="@+id/btnCosPlay"
+                app:outerStrokeColor="#861629"
+                app:outerStrokeWidth="2dp" />
 
 
 
             <ImageView
-                android:id="@+id/btnQuickMix"
+                android:id="@+id/btnRandom"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/img_home_3"
-                app:layout_constraintTop_toBottomOf="@+id/btnLuckiRoll" />
+                app:layout_constraintTop_toBottomOf="@+id/btnCosPlay" />
 
             <!--            tv2-->
             <com.temp.core.custom.text.DoubleStrokeTextView
@@ -145,17 +144,17 @@
                 android:layout_height="0dp"
                 android:fontFamily="@font/cherry_bomb_regular"
                 android:gravity="center"
-                android:text="@string/quick_mix"
+                android:text="@string/random"
                 android:textColor="#ffffff"
                 android:textSize="32sp"
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="-10dp"
                 android:layout_marginEnd="35dp"
-                app:layout_constraintBottom_toBottomOf="@+id/btnQuickMix"
+                app:layout_constraintBottom_toBottomOf="@+id/btnRandom"
                 app:layout_constraintStart_toEndOf="@id/glOverStart"
-                app:layout_constraintTop_toTopOf="@+id/btnQuickMix"
-                app:outerStrokeColor="#166086"
-                app:outerStrokeWidth="4dp" />
+                app:layout_constraintTop_toTopOf="@+id/btnRandom"
+                app:outerStrokeColor="#861629"
+                app:outerStrokeWidth="2dp" />
 
 
             <ImageView
@@ -166,7 +165,7 @@
                 android:layout_marginTop="8dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/img_home_4"
-                app:layout_constraintTop_toBottomOf="@+id/btnQuickMix" />
+                app:layout_constraintTop_toBottomOf="@+id/btnRandom" />
 
             <!--            tv2-->
             <com.temp.core.custom.text.DoubleStrokeTextView
@@ -179,14 +178,14 @@
                 android:text="@string/creation"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginStart="-15dp"
                 android:layout_marginEnd="30dp"
                 app:layout_constraintBottom_toBottomOf="@+id/btnMyCreation"
                 app:layout_constraintStart_toEndOf="@id/glOverStart"
                 app:layout_constraintTop_toTopOf="@+id/btnMyCreation"
-                app:outerStrokeColor="#166086"
-                app:outerStrokeWidth="4dp" />
+                app:outerStrokeColor="#861629"
+                app:outerStrokeWidth="2dp" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

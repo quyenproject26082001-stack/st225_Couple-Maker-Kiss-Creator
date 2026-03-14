@@ -171,8 +171,8 @@
     <string name="pride_max_colors_reached">Maximal 10 Farben erlaubt</string>
     <string name="my_pride">Mein Pride</string>
     <string name="play">SPIELEN</string>
-    <string name="lucki_roll">GLÜCKSRAD</string>
-    <string name="quick_mix">SCHNELLMISCHUNG</string>
+    <string name="tv_cosplay">GLÜCKSRAD</string>
+    <string name="random">SCHNELLMISCHUNG</string>
     <string name="creation">KREATION</string>
     <string name="back">ZURÜCK</string>
     <string name="hello_world_hint">Hallo Welt !!</string>

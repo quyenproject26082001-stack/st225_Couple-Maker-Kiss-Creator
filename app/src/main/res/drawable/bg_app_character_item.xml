@@ -7,7 +7,7 @@
     <!-- Lớp ngoài cùng: viền #4C97BC dày 1dp -->
     <item>
         <shape android:shape="rectangle">
-            <stroke android:width="2dp" android:color="#64BFED"/>
+            <stroke android:width="2dp" android:color="#861629"/>
             <corners android:radius="16dp"/>
         </shape>
     </item>
@@ -19,7 +19,7 @@
         android:right="2dp"
         android:bottom="2dp">
         <shape android:shape="rectangle">
-            <stroke android:width="1dp" android:color="#4C97BC"/>
+            <stroke android:width="1dp" android:color="#DA4E66"/>
             <corners android:radius="14dp"/>
         </shape>
     </item>

@@ -30,15 +30,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardBackgroundColor="@color/transparent"
-            app:cardCornerRadius="16dp"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="2dp"
             app:strokeColor="@color/transparent">
 
             <ImageView
                 android:id="@+id/imvImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                tools:src="@color/red_BA"
+                android:layout_margin="0dp"
+                tools:src="@color/dark"
                 android:clipToOutline="true"
                 android:scaleType="centerCrop" />
             <!--            imvImage-->
@@ -46,7 +47,7 @@
                 android:id="@+id/imvImageBG"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="2dp"
+                android:layout_margin="0dp"
                 android:clipToOutline="true"
                 android:scaleType="centerCrop" />
 

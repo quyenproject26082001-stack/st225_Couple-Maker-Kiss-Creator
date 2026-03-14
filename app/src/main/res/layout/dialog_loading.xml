@@ -22,7 +22,7 @@
                 android:id="@+id/containerDialog"
                 android:layout_width="311dp"
                 android:layout_height="152dp"
-                android:background="@drawable/bg_dialog_loading">
+                android:background="@drawable/bg_dialog_delete_exit">
 
                 <!--  tvTitle (Top) -->
                 <TextView
@@ -48,7 +48,7 @@
                     android:id="@+id/ivSpinner"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/ic_loading_spinner"
+                    android:src="@drawable/ic_loading_dialog"
                     app:layout_constraintBottom_toTopOf="@id/tvDescription"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -60,11 +60,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/roboto_regular"
+                    android:fontFamily="@font/cherry_bomb_regular"
                     android:gravity="center"
                     android:paddingHorizontal="24dp"
                     android:text="@string/wait_a_minute"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#7F7F7F"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

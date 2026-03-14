@@ -55,6 +55,7 @@
 
             android:layout_margin="4dp"
             android:scaleType="fitXY"
+            app:tint="#DA4E65"
             android:src="@drawable/ic_none"
             android:visibility="gone"
             />
@@ -68,6 +69,8 @@
             android:layout_margin="4dp"
             android:focusable="true"
             android:padding="16dp"
+            app:tint="#DA4E65"
+
             android:translationY="-2dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_random_layer"

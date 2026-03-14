@@ -24,7 +24,7 @@
                 android:fontFamily="@font/cherry_bomb_regular"
                 android:gravity="start"
                 android:text="@string/choose_color"
-                android:textColor="#4EABDA"
+                android:textColor="#DA4E65"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

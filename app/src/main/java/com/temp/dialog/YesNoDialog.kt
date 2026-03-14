@@ -63,15 +63,14 @@ class YesNoDialog(
         binding.containerDialog.setBackgroundResource(bgRes)
 
         val textColor = when (dialogType) {
-            DialogType.DELETE_EXIT -> Color.parseColor("#FFFFFF")
-            DialogType.RESET -> Color.parseColor("#FFFFFF")
-            DialogType.LOADING -> Color.parseColor("#FFFFFF")
-            DialogType.INTERNET -> Color.parseColor("#FFFFFF")
-            DialogType.PERMISSION -> Color.parseColor("#FFFFFF")
+            DialogType.DELETE_EXIT -> Color.parseColor("#7F7F7F")
+            DialogType.RESET -> Color.parseColor("#7F7F7F")
+            DialogType.LOADING -> Color.parseColor("#7F7F7F")
+            DialogType.INTERNET -> Color.parseColor("#7F7F7F")
+            DialogType.PERMISSION -> Color.parseColor("#7F7F7F")
         }
 
         binding.tvDescription.setTextColor(textColor)
-        binding.btnNo.setTextColor(textColor)
 
         when (dialogType) {
             DialogType.LOADING -> {
