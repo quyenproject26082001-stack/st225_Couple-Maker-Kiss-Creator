@@ -116,6 +116,7 @@
         app:strokeColor="#861629"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="@+id/containerBtnSamplePhoto"
         app:layout_constraintBottom_toBottomOf="@+id/containerBtnSamplePhoto"
         app:layout_constraintEnd_toEndOf="parent">
@@ -135,6 +136,7 @@
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="4dp"
         app:strokeColor="#861629"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/btnMan"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/containerBtnSamplePhoto"
