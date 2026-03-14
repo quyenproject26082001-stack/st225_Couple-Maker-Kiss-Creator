@@ -137,8 +137,9 @@ class DataViewModel() : ViewModel() {
                 } else {
                     dataLayer.parts.split("_")
                 }
-                val positionCustom = layerName.first().toInt() - 1
-                val positionNavigation = layerName.last().toInt() - 1
+                val positionCustom = layerName[0].toInt() - 1
+                val positionNavigation = layerName[1].toInt() - 1
+                val type = if (layerName.size >= 3) layerName[2].toIntOrNull() ?: 0 else 0
                 val imageNavigation = "${baseDomain}${DomainKey.SUB_DOMAIN}/${data.name}/${dataLayer.parts}/${DomainKey.IMAGE_NAVIGATION}"
                 val layer = getDataLayer(baseDomain, dataLayer, dataLayer.parts)
 
@@ -146,7 +147,8 @@ class DataViewModel() : ViewModel() {
                     positionCustom = positionCustom,
                     positionNavigation = positionNavigation,
                     imageNavigation = imageNavigation,
-                    layer = layer
+                    layer = layer,
+                    type = type
                 )
                 layerList.add(layerListModel)
             }

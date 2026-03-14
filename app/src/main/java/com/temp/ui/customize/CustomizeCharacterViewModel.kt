@@ -59,6 +59,10 @@ class CustomizeCharacterViewModel : ViewModel() {
 
     var positionCustom = -1
 
+    // Gender filter: 1 = man, 2 = woman
+    private val _selectedGender = MutableStateFlow(1)
+    val selectedGender = _selectedGender.asStateFlow()
+
     // Data gốc
     private val _dataCustomize = MutableStateFlow<CustomizeModel?>(null)
     val dataCustomize = _dataCustomize.asStateFlow()
@@ -103,6 +107,10 @@ class CustomizeCharacterViewModel : ViewModel() {
 
     fun setDataCustomize(data: CustomizeModel) {
         _dataCustomize.value = data
+    }
+
+    fun setGender(gender: Int) {
+        _selectedGender.value = gender
     }
 
     fun setIsDataAPI(isAPI: Boolean) {
@@ -195,8 +203,21 @@ class CustomizeCharacterViewModel : ViewModel() {
 
     suspend fun setBottomNavigationListDefault() {
         val outputBottomNavigationList = arrayListOf<NavigationModel>()
-        _dataCustomize.value!!.layerList.forEach { layerList ->
-            outputBottomNavigationList.add(NavigationModel(imageNavigation = layerList.imageNavigation))
+        val gender = _selectedGender.value
+        _dataCustomize.value!!.layerList.forEachIndexed { index, layerList ->
+            if (layerList.type == gender || layerList.type == 0) {
+                outputBottomNavigationList.add(
+                    NavigationModel(imageNavigation = layerList.imageNavigation, layerIndex = index)
+                )
+            }
+        }
+        if (outputBottomNavigationList.isEmpty()) {
+            // fallback: show all if no match
+            _dataCustomize.value!!.layerList.forEachIndexed { index, layerList ->
+                outputBottomNavigationList.add(
+                    NavigationModel(imageNavigation = layerList.imageNavigation, layerIndex = index)
+                )
+            }
         }
         outputBottomNavigationList.first().isSelected = true
         _bottomNavigationList.value = outputBottomNavigationList
@@ -263,8 +284,9 @@ class CustomizeCharacterViewModel : ViewModel() {
     }
 
     suspend fun setClickRandomLayer(): Pair<String, Boolean> {
-        val positionStartLayer = if (positionNavSelected == 0) 1 else 2
-        val randomLayer = if (positionNavSelected == 0) {
+        val isBodyLayer = positionNavSelected == _bottomNavigationList.value.firstOrNull()?.layerIndex
+        val positionStartLayer = if (isBodyLayer) 1 else 2
+        val randomLayer = if (isBodyLayer) {
             if (itemNavList[positionNavSelected].size == 1) {
                 1
             } else {
@@ -305,10 +327,11 @@ class CustomizeCharacterViewModel : ViewModel() {
         val isOutTurn = countRandom == 300
 
         val colorCode = if (colorListMost.isNotEmpty()) colorListMost[(0..<colorListMost.size).random()] else "#123456"
-        for (i in 0 until _bottomNavigationList.value.size) {
+        _bottomNavigationList.value.forEach { navModel ->
+            val i = navModel.layerIndex
             val minSize = if (i == 0) 1 else 2
             if (itemNavList[i].size <= minSize) {
-                continue
+                return@forEachIndexed
             }
             val randomLayer = (minSize..<itemNavList[i].size).random()
 
@@ -344,11 +367,12 @@ class CustomizeCharacterViewModel : ViewModel() {
 
     suspend fun setClickReset(): String {
         resetDataList()
-        _bottomNavigationList.value.forEachIndexed { index, model ->
-            val positionSelected = if (index == 0) 1 else 0
-            setItemNavList(index, positionSelected)
-            setColorItemNav(index, 0)
-            updateAllItemsColor(0, index)
+        _bottomNavigationList.value.forEach { navModel ->
+            val i = navModel.layerIndex
+            val positionSelected = if (i == 0) 1 else 0
+            setItemNavList(i, positionSelected)
+            setColorItemNav(i, 0)
+            updateAllItemsColor(0, i)
         }
         val pathDefault = _dataCustomize.value!!.layerList.first().layer.first().image
         pathSelectedList[_dataCustomize.value!!.layerList.first().positionCustom] = pathDefault
@@ -516,6 +540,7 @@ class CustomizeCharacterViewModel : ViewModel() {
 // Extension other
 
     suspend fun setImageViewList(frameLayout: FrameLayout) {
+        frameLayout.removeAllViews()
         imageViewList.clear()
         imageViewList.addAll(addImageViewToLayout(_dataCustomize.value!!.layerList.size, frameLayout))
     }

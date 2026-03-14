@@ -72,6 +72,8 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
 
     override fun initView() {
         initRcv()
+        binding.btnMan.isSelected = true
+        binding.btnWooman.isSelected = false
         lifecycleScope.launch { showLoading() }
         dataViewModel.ensureData(this)
 
@@ -144,6 +146,8 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
             btnRandom.tap { viewModel.checkDataInternet(this@CustomizeCharacterActivity) { handleRandomAllLayer() } }
             btnColor.tap { viewModel.checkDataInternet(this@CustomizeCharacterActivity) { handleStatusColor() } }
             btnHide.tap { viewModel.checkDataInternet(this@CustomizeCharacterActivity) { viewModel.setIsHideView() } }
+            btnMan.tap { handleGenderSwitch(1) }
+            btnWooman.tap { handleGenderSwitch(2) }
         }
         handleRcv()
     }
@@ -488,10 +492,12 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
     }
 
     private fun handleClickBottomNavigation(positionBottomNavigation: Int) {
-        if (positionBottomNavigation == viewModel.positionNavSelected) return
+        val layerIndex = viewModel.bottomNavigationList.value.getOrNull(positionBottomNavigation)?.layerIndex
+            ?: positionBottomNavigation
+        if (layerIndex == viewModel.positionNavSelected) return
         lifecycleScope.launch(Dispatchers.IO) {
-            viewModel.setPositionNavSelected(positionBottomNavigation)
-            viewModel.setPositionCustom(viewModel.dataCustomize.value!!.layerList[positionBottomNavigation].positionCustom)
+            viewModel.setPositionNavSelected(layerIndex)
+            viewModel.setPositionCustom(viewModel.dataCustomize.value!!.layerList[layerIndex].positionCustom)
             viewModel.setClickBottomNavigation(positionBottomNavigation)
             withContext(Dispatchers.Main) {
                 // Scroll color list to selected item when tab changes
@@ -584,6 +590,24 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
                         }
                     }
                 }
+        }
+    }
+
+    private fun handleGenderSwitch(gender: Int) {
+        if (viewModel.selectedGender.value == gender) return
+        binding.btnMan.isSelected = gender == 1
+        binding.btnWooman.isSelected = gender == 2
+        lifecycleScope.launch(Dispatchers.IO) {
+            viewModel.setGender(gender)
+            viewModel.setBottomNavigationListDefault()
+            val firstLayerIndex = viewModel.bottomNavigationList.value.first().layerIndex
+            viewModel.setPositionNavSelected(firstLayerIndex)
+            viewModel.setPositionCustom(viewModel.dataCustomize.value!!.layerList[firstLayerIndex].positionCustom)
+            withContext(Dispatchers.Main) {
+                layerCustomizeAdapter.submitList(viewModel.itemNavList[viewModel.positionNavSelected])
+                colorLayerCustomizeAdapter.submitList(viewModel.colorItemNavList[viewModel.positionNavSelected])
+                checkStatusColor()
+            }
         }
     }
 

@@ -120,17 +120,17 @@ object AssetHelper {
                 it.equals("avatar.webp", ignoreCase = true)
             }
 
-            // Filter chỉ lấy các folder layer có format đúng (dạng 1-13 hoặc 1_3)
+            // Filter chỉ lấy các folder layer có format đúng (dạng 1-13, 1_3, 1-13-1, 1-13-2)
             val sortedLayer = allItems.filter { item ->
                 val hasHyphen = item.contains("-")
                 val hasUnderscore = item.contains("_")
 
                 if (hasHyphen) {
                     val parts = item.split("-")
-                    parts.size == 2 && parts[0].toIntOrNull() != null && parts[1].toIntOrNull() != null
+                    (parts.size == 2 || parts.size == 3) && parts[0].toIntOrNull() != null && parts[1].toIntOrNull() != null
                 } else if (hasUnderscore) {
                     val parts = item.split("_")
-                    parts.size == 2 && parts[0].toIntOrNull() != null && parts[1].toIntOrNull() != null
+                    (parts.size == 2 || parts.size == 3) && parts[0].toIntOrNull() != null && parts[1].toIntOrNull() != null
                 } else {
                     false
                 }
@@ -172,7 +172,8 @@ object AssetHelper {
                 } else {
                     Log.d("AssetDebug", "✓ character=$character, folder=${sortedLayer[i]}, layerSize=${layer.size}")
                 }
-                val layerListModel = LayerListModel(positionCustom, positionNavigation, navigationImage, layer)
+                val type = if (position.size == 3) position[2].toIntOrNull() ?: 0 else 0
+                val layerListModel = LayerListModel(positionCustom, positionNavigation, navigationImage, layer, type)
                 layerListModelList.add(layerListModel)
             }
             layerListModelList.sortBy { it.positionNavigation }
