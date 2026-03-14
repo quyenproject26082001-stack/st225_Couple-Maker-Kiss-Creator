@@ -1,0 +1,34 @@
+package com.temp.dialog
+
+import android.animation.ObjectAnimator
+import android.app.Activity
+import android.view.animation.LinearInterpolator
+import com.temp.R
+import com.temp.core.base.BaseDialog
+import com.temp.databinding.DialogLoadingBinding
+
+class WaitingDialog(val context: Activity) :
+    BaseDialog<DialogLoadingBinding>(context, maxWidth = true, maxHeight = true) {
+    override val layoutId: Int = R.layout.dialog_loading
+    override val isCancelOnTouchOutside: Boolean = false
+    override val isCancelableByBack: Boolean = false
+
+    private var spinnerAnim: ObjectAnimator? = null
+
+    override fun initView() {
+        spinnerAnim = ObjectAnimator.ofFloat(binding.ivSpinner, "rotation", 0f, 360f).apply {
+            duration = 1000
+            repeatCount = ObjectAnimator.INFINITE
+            interpolator = LinearInterpolator()
+            start()
+        }
+    }
+
+    override fun initAction() {}
+
+    override fun onDismissListener() {
+        spinnerAnim?.cancel()
+        spinnerAnim = null
+    }
+
+}

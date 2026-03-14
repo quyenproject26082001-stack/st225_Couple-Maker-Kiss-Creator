@@ -1,0 +1,185 @@
+<resources>
+
+    <string name="app_name" translatable="false">Dress game</string>
+
+    <string name="go_to_setting_message">La aplicación necesita este permiso</string>
+    <string name="settings">CONFIGURACIÓN</string>
+    <string name="this_action_can_contain_ads">Esta acción puede contener anuncios</string>
+    <string name="not_select_lang">Por favor, selecciona un idioma</string>
+    <string name="next">SIGUIENTE</string>
+    <string name="language">IDIOMA</string>
+
+    <string name="title_1">Crea tu propio avatar como quieras</string>
+    <string name="title_2">Categorías Diversas y Únicas</string>
+    <string name="title_3">Gran Variedad de Artículos</string>
+
+    <string name="permission">PERMISO</string>
+    <string name="storage">ALMACENAMIENTO</string>
+    <string name="continue_per">Continuar</string>
+    <string name="notification">NOTIFICACIÓN</string>
+    <string name="no_internet">Sin Internet</string>
+    <string name="granted_notification">Permiso de notificación concedido</string>
+    <string name="granted_storage">Permiso de almacenamiento concedido</string>
+    <string name="allow">Permitir</string>
+    <string name="to_access">para acceder a las fotos en tu dispositivo</string>
+    <string name="to_access_13">para acceder a las notificaciones en tu dispositivo</string>
+
+    <string name="rate_us">CALIFICANOS</string>
+    <string name="share_app">COMPARTIR APP</string>
+    <string name="privacy_policy"><![CDATA[PRIVACIDAD & POLÍTICA]]></string>
+
+    <string name="zero_star_title">¿Te gusta la aplicación?</string>
+    <string name="zero_star">Cuéntanos tu experiencia</string>
+
+    <string name="one_star_title">¡Oh, no!</string>
+    <string name="one_star">Por favor, danos tu opinión</string>
+
+    <string name="two_star_title">¡Oh, no!</string>
+    <string name="two_star">Por favor, danos tu opinión</string>
+
+    <string name="three_star_title">¡Oh, no!</string>
+    <string name="three_star">Por favor, danos tu opinión</string>
+
+    <string name="four_star_title">¡Nosotros también te queremos!</string>
+    <string name="four_star">Gracias por tu opinión</string>
+
+    <string name="five_star_title">¡Nosotros también te queremos!</string>
+    <string name="five_star">Gracias por tu opinión</string>
+
+    <string name="rate_us_0">¡Aún no has calificado!</string>
+    <string name="rate">Calificar</string>
+    <string name="exit">SALIR</string>
+    <string name="have_rated">Gracias por calificar nuestra aplicación</string>
+    <string name="share">COMPARTIR</string>
+    <string name="delete">ELIMINAR</string>
+    <string name="download">DESCARGAR</string>
+    <string name="yes">SÍ</string>
+    <string name="no">NO</string>
+    <string name="ok">Ok</string>
+    <string name="wait_a_minute">POR FAVOR ESPERA UN MOMENTO</string>
+    <string name="reset">RESTABLECER</string>
+    <string name="download_success">Descarga exitosa en el álbum Anime Dress Up: OC Maker &amp; PFP</string>
+    <string name="please_check_your_internet">Por favor, comprueba tu internet</string>
+    <string name="please_select_an_image">Por favor, selecciona una imagen</string>
+    <string name="error">Error</string>
+    <string name="an_error_occurred">Se produjo un error, por favor inténtalo de nuevo más tarde.</string>
+    <string name="image_has_been_saved_successfully">¡El proyecto se ha guardado con éxito!</string>
+    <string name="save">GUARDAR</string>
+    <string name="are_you_sure_want_to_delete_this_item">¿DESEAS ELIMINAR?</string>
+    <string name="downloading">Descargando...</string>
+    <string name="successfully">Exitosamente</string>
+    <string name="download_failed_please_try_again_later">Descarga fallida, ¡por favor inténtalo de nuevo más tarde!</string>
+    <string name="save_failed_please_try_again">¡Error al guardar, por favor inténtalo de nuevo!</string>
+    <string name="delete_failed_please_try_again">¡Error al eliminar, por favor inténtalo de nuevo!</string>
+    <string name="my_creation">MI CREACIÓN</string>
+    <string name="delete_your_customize">Eliminar tu personalización</string>
+    <string name="are_you_sure_you_want_to_delete_the_image">¿Estás seguro de que quieres eliminar la imagen?</string>
+    <string name="haven_t_saved_it_yet_do_you_want_to_exit">Aún no guardado, ¿estás seguro de que quieres salir?</string>
+    <string name="change_your_whole_design_are_you_sure">¿DESEAS RESTABLECER?</string>
+    <string name="character_maker">Pixel Maker</string>
+    <string name="no_item_here">No Hay Artículos Aquí</string>
+    <string name="quick_maker">Quick Maker</string>
+    <string name="my_character">Mi Pixel</string>
+    <string name="category">Pixel Maker</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_item_space">Sin historial actual</string>
+    <string name="add_to_whatsapp">Añadir a Whatsapp</string>
+    <string name="add_to_telegram">Añadir a Telegram</string>
+    <string name="my_avatar">Mi Avatar</string>
+    <string name="my_design">DISEÑO</string>
+    <string name="my_album">Mi álbum</string>
+    <string name="no_app_found_to_handle_this_action">No se encontró ninguna app para esta acción</string>
+    <string name="invalid_action_msg">Aplicación no instalada</string>
+    <string name="invalid_action">Error</string>
+    <string name="limit_3_items">Se necesitan al menos 3 artículos para crear un sticker</string>
+    <string name="limit_30_items">Solo se pueden añadir un máximo de 30 artículos</string>
+    <string name="create_package_name">Crear Nombre de Paquete</string>
+    <string name="enter_your_package_name">Ingresa el nombre de tu paquete</string>
+    <string name="please_enter_your_package_name">¡Por favor ingresa el nombre de tu paquete!</string>
+    <string name="background">Fondo</string>
+    <string name="image">IMAGEN</string>
+    <string name="color">COLOR</string>
+    <string name="add_image">Añadir Imagen</string>
+    <string name="sticker">Sticker</string>
+    <string name="speech_bubbles">Globos de diálogo</string>
+    <string name="text">Insertar texto</string>
+    <string name="type_your_content">Escribe tu contenido...</string>
+    <string name="font">Fuente</string>
+    <string name="choose_color">Elegir Color</string>
+    <string name="done">LISTO</string>
+    <string name="null_edt">Por favor ingresa texto</string>
+    <string name="input_text">Insertar texto</string>
+    <string name="hello_world">Escribe tu contenido...</string>
+    <string name="no_item_desgin">Sin historial actual</string>
+    <string name="my_character_in">Mi Trabajo</string>
+    <string name="quick_maker_in">Mezcla rápida</string>
+    <string name="exit_add">Salir de tu fondo</string>
+    <string name="exit_bg">Salir de tu fondo</string>
+    <string name="loading">CARGANDO...</string>
+    <string name="internet_required_for_more_characters">Se requiere Internet para más personajes</string>
+    <string name="music">Música</string>
+    <string name="my_work">Mi Trabajo</string>
+    <string name="pride_maker">Pride OC Maker</string>
+    <string name="trending">Personalizado en Tendencia</string>
+    <string name="my_pony">Mi Pony</string>
+    <string name="do_you_want_to_exit">EL PERSONAJE NO HA SIDO GUARDADO, ¿DESEAS SALIR DE TODOS MODOS?</string>
+    <string name="pfp_random">Pride PFP Aleatorio</string>
+    <string name="trending_tv">Pride PFP en Tendencia</string>
+    <string name="pride_pfp_overlay">Mi Overlay</string>
+    <string name="generate">Generar Aleatorio</string>
+
+    <string name="pride_choose_image">Elegir Imagen</string>
+    <string name="pride_crop_image">Recortar Imagen</string>
+    <string name="pride_choose_flags">Elige Tus Banderas Pride</string>
+    <string name="pride_choose_layout">Elegir Estilo de Diseño</string>
+    <string name="pride_choose_design">Elegir Estilo de Diseño</string>
+    <string name="pride_result_title">Tu Foto de Perfil Pride Está Lista</string>
+    <string name="pride_result_subtitle">Muestra tu Pride con tu foto de perfil personalizada</string>
+    <string name="pride_choose_image_hint">Elige una imagen para editar</string>
+    <string name="pride_no_image_uploaded">No se ha subido ninguna imagen</string>
+    <string name="pride_click_to_select_different">Haz clic para seleccionar una imagen diferente</string>
+    <string name="pride_select_up_to_4">Selecciona hasta 4 banderas para añadir a tu foto de perfil</string>
+    <string name="pride_selected_flags">Banderas Seleccionadas</string>
+    <string name="pride_my_custom">Mi Bandera Personalizada</string>
+    <string name="pride_flags_section">Bandera Pride</string>
+    <string name="pride_layout_subtitle">Selecciona cómo deben posicionarse las banderas en tu imagen</string>
+    <string name="pride_layout_circle">Círculo</string>
+    <string name="pride_layout_circle_desc">Aplicar bandera como borde circular alrededor de la imagen</string>
+    <string name="pride_layout_square">Cuadrado</string>
+    <string name="pride_layout_square_desc">Aplicar bandera como borde cuadrado alrededor de la imagen</string>
+    <string name="pride_layout_background">Fondo</string>
+    <string name="pride_layout_background_desc">Combinar la transparencia de la imagen original con la bandera</string>
+    <string name="pride_design_subtitle">Selecciona el estilo visual para tus banderas Pride</string>
+    <string name="pride_image_zoom">Zoom de Imagen</string>
+    <string name="image_scale">Escala de Imagen</string>
+    <string name="pride_default_zoom">Zoom de Imagen Predeterminado</string>
+    <string name="pride_default_ring">Escala de Imagen Predeterminada</string>
+    <string name="pride_center_image">Centrar Posición de la Imagen</string>
+    <string name="pride_flag_mode_ring">Modo Bandera: Imagen</string>
+    <string name="pride_previous"> Anterior</string>
+    <string name="pride_start_over">Empezar de Nuevo</string>
+    <string name="pride_continue">Continuar</string>
+    <string name="pride_create_another">Crear Otro</string>
+    <string name="pride_my_work">Mi Trabajo</string>
+    <string name="pride_center">Centro</string>
+    <string name="pride_create_custom_flag">Crear Bandera Personalizada</string>
+    <string name="pride_flag_name">Nombre de la Bandera</string>
+    <string name="pride_enter_name">Ingresa el Nombre</string>
+    <string name="pride_colors">Colores</string>
+    <string name="pride_create">Crear</string>
+    <string name="pride_select_at_least_one">Por favor selecciona al menos una bandera</string>
+    <string name="pride_max_colors_reached">Máximo de 10 colores permitidos</string>
+    <string name="my_pride">Mi Pride</string>
+    <string name="play">JUGAR</string>
+    <string name="lucki_roll">RULETA DE LA SUERTE</string>
+    <string name="quick_mix">MEZCLA RÁPIDA</string>
+    <string name="creation">CREACIÓN</string>
+    <string name="back">ATRÁS</string>
+    <string name="hello_world_hint">¡Hola Mundo !!</string>
+    <string name="character">PERSONAJE</string>
+    <string name="edit">EDITAR</string>
+    <string name="click_the_random_button_below_to_see_what_your_character_is">¡Haz clic en el botón aleatorio de abajo para ver cuál es tu personaje!</string>
+    <string name="next_intro">Siguiente</string>
+    <string name="color_text">Color</string>
+</resources>

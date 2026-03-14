@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app"
+    android:clipChildren="false"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:rotationY="0"
+    tools:context=".ui.add_character.AddCharacterActivity">
+
+    <!--    flGetText-->
+    <FrameLayout
+        android:id="@+id/flGetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        android:paddingHorizontal="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        tvGetText-->
+        <TextView
+            android:id="@+id/tvGetText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLength="30"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+    </FrameLayout>
+
+
+    <!--    flActionBar-->
+    <FrameLayout
+        android:id="@+id/flActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/actionBar"
+            layout="@layout/layout_actionbar" />
+    </FrameLayout>
+
+
+    <!--    flSave-->
+    <FrameLayout
+        android:id="@+id/flSaveBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flActionBar">
+
+        <!--        imvBackground-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_drawview"
+            android:scaleType="centerCrop" />
+        <!--        drawView-->
+        <com.temp.core.custom.drawview.DrawView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!--    flSave-->
+    <FrameLayout
+        android:id="@+id/flSave"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flActionBar">
+
+        <!--        imvBackground-->
+        <ImageView
+            android:id="@+id/imvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+        <!--        drawView-->
+        <com.temp.core.custom.drawview.DrawView
+            android:id="@+id/drawView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+
+    <!--    flFunction-->
+    <FrameLayout
+        android:id="@+id/flFunction"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flSave">
+
+        <ImageView
+            android:id="@+id/bg_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/bg_bg" />
+
+        <ImageView
+            android:id="@+id/bg_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_bg"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/sectionTab"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="58dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!--                btnBackgroundImage-->
+            <FrameLayout
+                android:id="@+id/btnBackgroundImage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!--                imvBgImage (nền)-->
+                <ImageView
+                    android:id="@+id/imvBgImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/subTabImage"
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:background="@drawable/un_selected_tab_sub"
+                    android:visibility="gone" />
+
+                <!--                imvFocusImage (nền khi chọn)-->
+                <ImageView
+                    android:id="@+id/imvFocusImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/selected_tab"
+                    android:visibility="visible" />
+
+                <!--                tvBackgroundImage-->
+                <TextView
+                    android:id="@+id/tvBackgroundImage"
+                    style="@style/single_marquee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:gravity="center"
+                    android:text="@string/image"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="17dp"
+                android:layout_height="match_parent" />
+            <!--                btnBackgroundColor-->
+            <FrameLayout
+                android:id="@+id/btnBackgroundColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1">
+
+                <!--                imvBgColor (nền)-->
+                <ImageView
+                    android:id="@+id/imvBgColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/subTabColor"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/un_selected_tab_sub"
+                    android:visibility="gone" />
+
+                <!--                imvFocusColor (nền xanh khi chọn)-->
+                <ImageView
+                    android:id="@+id/imvFocusColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:scaleX="1"
+                    android:src="@drawable/un_selected_tab"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <!--                tvBackgroundColor-->
+                <TextView
+                    android:id="@+id/tvBackgroundColor"
+                    style="@style/single_marquee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:gravity="center"
+                    android:text="@string/color"
+                    android:textColor="#85CDF2"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--        lnlBackground-->
+        <LinearLayout
+            android:id="@+id/lnlBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+
+            <!--            rcvBackgroundImage-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBackgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4.5dp"
+                android:paddingHorizontal="7.5dp"
+                android:visibility="gone"
+                android:paddingBottom="80dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_background_image"
+                tools:visibility="gone" />
+
+            <!--            rcvBackgroundColor-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvBackgroundColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4.5dp"
+                android:paddingHorizontal="7.5dp"
+                android:visibility="gone"
+                android:paddingBottom="80dp"
+
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_background_color"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <!--        lnlSticker-->
+        <LinearLayout
+            android:id="@+id/lnlSticker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+<!--            &lt;!&ndash; Title: Sticker &ndash;&gt;-->
+            <TextView
+                android:id="@+id/tvTitleSticker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="@string/sticker"
+                android:textColor="#85CDF2"
+                android:textSize="20sp" />
+
+            <!--            rcvSticker-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvSticker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="22dp"
+                android:paddingBottom="80dp"
+                android:paddingHorizontal="7.5dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:listitem="@layout/item_sticker" />
+        </LinearLayout>
+
+        <!--        lnlSpeech-->
+        <LinearLayout
+            android:id="@+id/lnlSpeech"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="22dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <!-- Title: Speech Bubbles -->
+            <TextView
+                android:id="@+id/tvTitleSpeech"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="@string/speech_bubbles"
+                android:textColor="#85CDF2"
+                android:textSize="20sp" />
+
+            <!--            rcvSticker-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvSpeech"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="11.5dp"
+                android:paddingHorizontal="7.5dp"
+                android:paddingBottom="80dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="5"
+                tools:listitem="@layout/item_sticker" />
+        </LinearLayout>
+
+        <!--        scvText-->
+        <ScrollView
+            android:id="@+id/scvText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="22dp"
+            android:clipChildren="false"
+            android:paddingBottom="50dp"
+            android:isScrollContainer="true"
+            android:paddingTop="15dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:orientation="vertical">
+
+                <!-- Title: Text with Done Button -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <!-- Title: Text -->
+                    <TextView
+                        android:id="@+id/tvTitleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cherry_bomb_regular"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:text="@string/text"
+                        android:textColor="#85CDF2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/cherry_bomb_regular"
+                        android:gravity="start"
+                        android:text="@string/text"
+                        android:textColor="#85CDF2"
+                        android:textSize="18sp" />
+                    <!--                    btnDoneText-->
+                    <ImageView
+                        android:id="@+id/btnDoneText"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginTop="-2dp"
+                        android:layout_marginEnd="16dp"
+                        android:tint="#85CDF2"
+                        android:src="@drawable/ic_done_background" />
+                </FrameLayout>
+
+
+
+
+                <!--            edtText-->
+                <EditText
+                    android:id="@+id/edtText"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_edit_text"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/londrina_solid_regular"
+                    android:hint="@string/hello_world_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:paddingHorizontal="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#808080"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tvFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:gravity="start"
+                    android:text="@string/font"
+                    android:textColor="#85CDF2"
+                    android:textSize="18sp" />
+
+                <!--            rcvFont-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="true"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="0.5dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/titleFont"
+                    tools:listitem="@layout/item_font" />
+
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="-6dp"
+                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:gravity="start"
+                    android:text="@string/color_text"
+                    android:textColor="#85CDF2"
+                    android:textSize="18sp" />
+
+                <!--            rcvTextColor-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/titleColor"
+                    tools:listitem="@layout/item_text_color" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+
+    <!--    lnlBottom-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/bg_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--        btnBackground-->
+        <ImageView
+            android:id="@+id/btnBackground"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/ic_background_selected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        btnSticker-->
+        <ImageView
+            android:id="@+id/btnSticker"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_sticker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSpeech"
+            app:layout_constraintStart_toEndOf="@id/btnBackground"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        btnSpeech-->
+        <ImageView
+            android:id="@+id/btnSpeech"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_speech"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnText"
+            app:layout_constraintStart_toEndOf="@id/btnSticker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        btnText-->
+        <ImageView
+            android:id="@+id/btnText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="60dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rotationY="-83"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!--    &lt;!&ndash;    flNativeCollab&ndash;&gt;-->
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/flNativeCollab"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--    </FrameLayout>-->
+
+    <!--    &lt;!&ndash; Custom Input View (1/4 screen height) &ndash;&gt;-->
+    <!--    <include-->
+    <!--        android:id="@+id/customInputLayout"-->
+    <!--        layout="@layout/layout_custom_input"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintHeight_percent="0.25" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

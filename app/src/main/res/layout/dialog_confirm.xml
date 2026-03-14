@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--    flOutSide-->
+    <FrameLayout
+        android:id="@+id/flOutSide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        layoutMain-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutMain"
+            app:cardBackgroundColor="@color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDialog"
+                android:layout_width="311dp"
+                android:layout_height="172dp"
+                android:background="@drawable/bg_dialog_delete_exit">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/single_marquee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="70dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/chewy_regular"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:text="@string/delete"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--            tvDescription-->
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/cherry_bomb_regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:text="@string/do_you_want_to_exit"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/llButtons"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                <LinearLayout
+                    android:id="@+id/llButtons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="35dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <!--                    btnNo-->
+                    <TextView
+                        android:id="@+id/btnNo"
+                        android:layout_width="88dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cherry_bomb_regular"
+                        android:gravity="center"
+                        android:paddingVertical="6dp"
+                        android:text="@string/no"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <!--                    btnYes-->
+                    <TextView
+                        android:id="@+id/btnYes"
+                        android:layout_width="88dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/cherry_bomb_regular"
+                        android:gravity="center"
+                        android:paddingVertical="9dp"
+                        android:text="@string/yes"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/spin"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_loading"
+                android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+</layout>

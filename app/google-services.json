@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "973276764419",
+    "project_id": "st230-anime-dress-up",
+    "storage_bucket": "st230-anime-dress-up.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973276764419:android:44b59085264bccd6cf3136",
+        "android_client_info": {
+          "package_name": "com.temp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3gjBX268i4LipejjoZ7woe2QoDn8BIaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

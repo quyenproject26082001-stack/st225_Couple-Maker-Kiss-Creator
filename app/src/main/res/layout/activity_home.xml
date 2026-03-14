@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_app" />
+
+
+    <ImageView
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_settings"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        android:layout_marginTop="60dp"
+        android:id="@+id/btnSettings" />
+
+
+    <!--    scvMain-->
+    <ScrollView
+        android:id="@+id/scvMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSettings">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="30dp"
+            android:layout_height="wrap_content">
+
+            <!--            glOverStart-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glOverStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="33dp" />
+
+            <!--            glOverEnd-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glOverEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.91" />
+
+            <!--            btnPlay-->
+            <ImageView
+                android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            tv1-->
+
+
+            <!--            btnLuckiRoll-->
+            <com.temp.core.custom.text.DoubleStrokeTextView
+                android:id="@+id/tv1"
+                style="@style/single_marquee"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center_vertical"
+                android:clipToOutline="false"
+                android:text="@string/play"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/white"
+                android:textSize="51sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
+                app:layout_constraintEnd_toEndOf="@+id/glOverEnd"
+                app:layout_constraintStart_toStartOf="@id/glOverStart"
+                app:layout_constraintTop_toTopOf="@+id/btnPlay"
+                app:layout_constraintVertical_bias="0.0"
+
+                app:outerStrokeColor="#166086"
+                app:outerStrokeWidth="6dp" />
+
+            <ImageView
+                android:id="@+id/btnLuckiRoll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_2"
+                app:layout_constraintTop_toBottomOf="@+id/btnPlay" />
+
+            <!--            tv2-->
+            <com.temp.core.custom.text.DoubleStrokeTextView
+                android:id="@+id/tv2"
+                android:maxLines="2"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center"
+                android:text="@string/lucki_roll"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnLuckiRoll"
+                app:layout_constraintStart_toEndOf="@id/glOverStart"
+                app:layout_constraintTop_toTopOf="@+id/btnLuckiRoll"
+                app:outerStrokeColor="#166086"
+                app:outerStrokeWidth="4dp" />
+
+
+
+            <ImageView
+                android:id="@+id/btnQuickMix"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_3"
+                app:layout_constraintTop_toBottomOf="@+id/btnLuckiRoll" />
+
+            <!--            tv2-->
+            <com.temp.core.custom.text.DoubleStrokeTextView
+                android:id="@+id/tv3"
+                android:maxLines="2"
+                android:layout_width="150dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center"
+                android:text="@string/quick_mix"
+                android:textColor="#ffffff"
+                android:textSize="32sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="-10dp"
+                android:layout_marginEnd="35dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnQuickMix"
+                app:layout_constraintStart_toEndOf="@id/glOverStart"
+                app:layout_constraintTop_toTopOf="@+id/btnQuickMix"
+                app:outerStrokeColor="#166086"
+                app:outerStrokeWidth="4dp" />
+
+
+            <ImageView
+                android:id="@+id/btnMyCreation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_home_4"
+                app:layout_constraintTop_toBottomOf="@+id/btnQuickMix" />
+
+            <!--            tv2-->
+            <com.temp.core.custom.text.DoubleStrokeTextView
+                android:id="@+id/tv4"
+                style="@style/single_marquee"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/cherry_bomb_regular"
+                android:gravity="center"
+                android:text="@string/creation"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="-15dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnMyCreation"
+                app:layout_constraintStart_toEndOf="@id/glOverStart"
+                app:layout_constraintTop_toTopOf="@+id/btnMyCreation"
+                app:outerStrokeColor="#166086"
+                app:outerStrokeWidth="4dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--    flNativeCollab-->
+    <FrameLayout
+        android:id="@+id/flNativeCollab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
