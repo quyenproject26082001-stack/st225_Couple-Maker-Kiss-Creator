@@ -331,7 +331,7 @@ class CustomizeCharacterViewModel : ViewModel() {
             val i = navModel.layerIndex
             val minSize = if (i == 0) 1 else 2
             if (itemNavList[i].size <= minSize) {
-                return@forEachIndexed
+                return@forEach
             }
             val randomLayer = (minSize..<itemNavList[i].size).random()
 

@@ -182,4 +182,5 @@
     <string name="click_the_random_button_below_to_see_what_your_character_is">Cliquez sur le bouton aléatoire ci-dessous pour voir quel est votre personnage !</string>
     <string name="next_intro">Suivant</string>
     <string name="color_text">Couleur</string>
+    <string name="playcos">PLAY</string>
 </resources>
