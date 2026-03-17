@@ -221,6 +221,13 @@ class CustomizeCharacterViewModel : ViewModel() {
         }
         outputBottomNavigationList.first().isSelected = true
         _bottomNavigationList.value = outputBottomNavigationList
+
+        // Nav đầu tiên là hình thân → không được có None
+        val firstLayerIndex = outputBottomNavigationList.first().layerIndex
+        if (itemNavList.size > firstLayerIndex) {
+            val firstLayer = _dataCustomize.value!!.layerList[firstLayerIndex]
+            itemNavList[firstLayerIndex] = createListItem(firstLayer, isBody = true)
+        }
     }
 
 
@@ -234,12 +241,8 @@ class CustomizeCharacterViewModel : ViewModel() {
     //  Item Nav / Layer
     suspend fun addValueToItemNavList() {
         itemNavList.clear()
-        _dataCustomize.value!!.layerList.forEachIndexed { index, layer ->
-            if (index == 0) {
-                itemNavList.add(createListItem(layer, true))
-            } else {
-                itemNavList.add(createListItem(layer))
-            }
+        _dataCustomize.value!!.layerList.forEach { layer ->
+            itemNavList.add(createListItem(layer, layer.positionNavigation == 0))
         }
     }
 
@@ -329,7 +332,7 @@ class CustomizeCharacterViewModel : ViewModel() {
         val colorCode = if (colorListMost.isNotEmpty()) colorListMost[(0..<colorListMost.size).random()] else "#123456"
         _bottomNavigationList.value.forEach { navModel ->
             val i = navModel.layerIndex
-            val minSize = if (i == 0) 1 else 2
+            val minSize = if (itemNavList[i].firstOrNull()?.path == AssetsKey.NONE_LAYER) 2 else 1
             if (itemNavList[i].size <= minSize) {
                 return@forEach
             }
@@ -369,7 +372,7 @@ class CustomizeCharacterViewModel : ViewModel() {
         resetDataList()
         _bottomNavigationList.value.forEach { navModel ->
             val i = navModel.layerIndex
-            val positionSelected = if (i == 0) 1 else 0
+            val positionSelected = if (itemNavList[i].firstOrNull()?.path == AssetsKey.NONE_LAYER) 0 else 1
             setItemNavList(i, positionSelected)
             setColorItemNav(i, 0)
             updateAllItemsColor(0, i)

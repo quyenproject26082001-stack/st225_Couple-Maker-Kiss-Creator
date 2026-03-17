@@ -55,19 +55,17 @@ fun Activity.hideNavigation(isBlack: Boolean = false) {
         WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
     )
 
-    // Set status bar color
-    window.statusBarColor = if (isBlack) {
-        android.graphics.Color.TRANSPARENT
-    } else {
-        android.graphics.Color.BLACK
-    }
+    // Set status bar color — always transparent so app content shows through
+    window.statusBarColor = android.graphics.Color.TRANSPARENT
 
     window.decorView.systemUiVisibility = if (isBlack) {
+        // Light status bar: dark icons (for light-background screens)
         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
                 View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or
                 View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
     } else {
+        // Default: white icons, transparent background
         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
                 View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION

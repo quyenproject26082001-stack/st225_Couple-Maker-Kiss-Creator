@@ -145,7 +145,14 @@ class TrendingActivity : BaseActivity<ActivityTrendingBinding>() {
                 customizeCharacterViewModel.resetDataList()
                 customizeCharacterViewModel.addValueToItemNavList()
                 customizeCharacterViewModel.setItemColorDefault()
-                customizeCharacterViewModel.setBottomNavigationListDefault()
+                val allNavList = data.layerList.mapIndexed { index, layer ->
+                    com.temp.data.model.custom.NavigationModel(
+                        imageNavigation = layer.imageNavigation,
+                        layerIndex = index
+                    )
+                }.toCollection(ArrayList())
+                allNavList.firstOrNull()?.isSelected = true
+                customizeCharacterViewModel.setBottomNavigationList(allNavList)
                 for (j in 0 until ValueKey.RANDOM_QUANTITY) {
                     customizeCharacterViewModel.setClickRandomFullLayer()
                     val suggestion = customizeCharacterViewModel.getSuggestionList()

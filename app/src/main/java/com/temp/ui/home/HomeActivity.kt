@@ -24,7 +24,7 @@ import com.temp.ui.my_creation.MyCreationActivity
 import com.temp.ui.choose_character.ChooseCharacterActivity
 import com.temp.core.extensions.tap
 import com.temp.core.extensions.strings
-import com.temp.ui.random_character.RandomCharacterActivity
+import com.temp.CosplayRandomActivity
 import com.temp.ui.trending.TrendingActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -56,7 +56,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
             btnSettings.tap(800) { startIntentRightToLeft(SettingsActivity::class.java) }
             btnCosPlay.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
             btnMyCreation.tap(800) { showInterAll { startIntentRightToLeft(MyCreationActivity::class.java) } }
-           btnRandom.tap(800) { showInterAll {startIntentRightToLeft(RandomCharacterActivity::class.java) }}
+           btnRandom.tap(800) { showInterAll { startIntentRightToLeft(CosplayRandomActivity::class.java) } }
             btnPlay.tap(800) { startIntentRightToLeft(com.temp.ui.choose_character.ChooseCharacterActivity::class.java) }
 
         }

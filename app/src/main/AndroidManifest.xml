@@ -24,7 +24,17 @@
         tools:replace="android:fullBackupContent">
         <activity
             android:name=".CosplayRandomActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CosplayCustomizeActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CosplaySuccessfulActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <!-- Disable AdMob auto-initialization -->
         <provider
             android:name="com.google.android.gms.ads.MobileAdsInitProvider"
