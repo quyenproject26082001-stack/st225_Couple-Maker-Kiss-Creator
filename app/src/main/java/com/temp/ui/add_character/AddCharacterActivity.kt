@@ -536,8 +536,8 @@ class AddCharacterActivity : BaseActivity<ActivityAddCharacterBinding>() {
                     Glide.with(this@AddCharacterActivity)
                         .asBitmap()
                         .load(path)
-                        .override(256, 256)
-                        .encodeQuality(50)
+                        .override(1024, 1024)
+                        .encodeQuality(100)
                         .submit()
                         .get()
                 } else {

@@ -45,6 +45,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         binding.tv1.isSelected = true
       //  binding.tv3.isSelected = true
         binding.tv2.isSelected = true
+        binding.btnSettings.setImageResource(R.drawable.ic_setting)
 
         // Apply elastic bounce animation to app name
         val elasticBounce = AnimationUtils.loadAnimation(this, R.anim.elastic_bounce)
@@ -54,9 +55,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
     override fun viewListener() {
         binding.apply {
             btnSettings.tap(800) { startIntentRightToLeft(SettingsActivity::class.java) }
-            btnCosPlay.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
+            btnRandom.tap(800) { startIntentRightToLeft(TrendingActivity::class.java) }
             btnMyCreation.tap(800) { showInterAll { startIntentRightToLeft(MyCreationActivity::class.java) } }
-           btnRandom.tap(800) { showInterAll { startIntentRightToLeft(CosplayRandomActivity::class.java) } }
+            btnCosPlay.tap(800) { showInterAll { startIntentRightToLeft(CosplayRandomActivity::class.java) } }
             btnPlay.tap(800) { startIntentRightToLeft(com.temp.ui.choose_character.ChooseCharacterActivity::class.java) }
 
         }

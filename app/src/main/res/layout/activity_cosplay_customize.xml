@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <!--    btnFlip-->
     <ImageView
@@ -122,8 +122,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="6dp"
-        android:background="@drawable/ic_man_slt"
-
+        android:background="@drawable/selector_btn_man"
         android:elevation="1dp"
         app:layout_constraintEnd_toEndOf="@id/gl_btn"
         app:layout_constraintTop_toBottomOf="@id/glHorizontal" />
@@ -196,7 +195,7 @@
         android:layout_width="64dp"
         android:layout_height="48dp"
         android:layout_marginStart="6dp"
-        android:background="@drawable/ic_man_slt"
+        android:background="@drawable/selector_btn_woman"
         android:elevation="1dp"
         app:layout_constraintStart_toStartOf="@id/gl_btn"
         app:layout_constraintTop_toTopOf="@id/btnMan"
@@ -264,14 +263,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="0dp"
         android:background="@color/transparent"
         android:elevation="1dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/rcvLayer"
+        app:layout_constraintTop_toBottomOf="@id/btnMan"
         tools:visibility="visible">
         <!--    btnColor-->
         <ImageView
@@ -323,21 +322,33 @@
         app:layout_constraintBottom_toTopOf="@+id/flBottomNav"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnMan"
+        android:background="@drawable/bg_cus"
+        android:layout_marginTop="20dp"/>
+
+
     <!--    rcvLayer-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvLayer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_cus"
+        android:layout_marginTop="4dp"
         android:layerType="hardware"
         android:paddingHorizontal="9.5dp"
-        android:paddingTop="84dp"
+        android:clipToPadding="false"
         android:paddingBottom="80dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnMan"
+        app:layout_constraintTop_toBottomOf="@id/color"
         app:spanCount="5"
+        android:layout_marginBottom="20dp"
         tools:itemCount="50"
         tools:listitem="@layout/item_customize" />
 

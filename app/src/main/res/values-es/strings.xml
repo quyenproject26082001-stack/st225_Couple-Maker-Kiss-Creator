@@ -1,7 +1,5 @@
 <resources>
 
-    <string name="app_name" translatable="false">Dress game</string>
-
     <string name="go_to_setting_message">La aplicación necesita este permiso</string>
     <string name="settings">CONFIGURACIÓN</string>
     <string name="this_action_can_contain_ads">Esta acción puede contener anuncios</string>
@@ -82,8 +80,6 @@
     <string name="my_character">Mi Pixel</string>
     <string name="category">Pixel Maker</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="no_item_space">Sin historial actual</string>
     <string name="add_to_whatsapp">Añadir a Whatsapp</string>
     <string name="add_to_telegram">Añadir a Telegram</string>
     <string name="my_avatar">Mi Avatar</string>
@@ -111,69 +107,14 @@
     <string name="null_edt">Por favor ingresa texto</string>
     <string name="input_text">Insertar texto</string>
     <string name="hello_world">Escribe tu contenido...</string>
-    <string name="no_item_desgin">Sin historial actual</string>
-    <string name="my_character_in">Mi Trabajo</string>
-    <string name="quick_maker_in">Mezcla rápida</string>
-    <string name="exit_add">Salir de tu fondo</string>
-    <string name="exit_bg">Salir de tu fondo</string>
     <string name="loading">CARGANDO...</string>
     <string name="internet_required_for_more_characters">Se requiere Internet para más personajes</string>
-    <string name="music">Música</string>
     <string name="my_work">Mi Trabajo</string>
-    <string name="pride_maker">Pride OC Maker</string>
-    <string name="trending">Personalizado en Tendencia</string>
-    <string name="my_pony">Mi Pony</string>
     <string name="do_you_want_to_exit">EL PERSONAJE NO HA SIDO GUARDADO, ¿DESEAS SALIR DE TODOS MODOS?</string>
-    <string name="pfp_random">Pride PFP Aleatorio</string>
-    <string name="trending_tv">Pride PFP en Tendencia</string>
-    <string name="pride_pfp_overlay">Mi Overlay</string>
     <string name="generate">Generar Aleatorio</string>
-
-    <string name="pride_choose_image">Elegir Imagen</string>
-    <string name="pride_crop_image">Recortar Imagen</string>
-    <string name="pride_choose_flags">Elige Tus Banderas Pride</string>
-    <string name="pride_choose_layout">Elegir Estilo de Diseño</string>
-    <string name="pride_choose_design">Elegir Estilo de Diseño</string>
-    <string name="pride_result_title">Tu Foto de Perfil Pride Está Lista</string>
-    <string name="pride_result_subtitle">Muestra tu Pride con tu foto de perfil personalizada</string>
-    <string name="pride_choose_image_hint">Elige una imagen para editar</string>
-    <string name="pride_no_image_uploaded">No se ha subido ninguna imagen</string>
-    <string name="pride_click_to_select_different">Haz clic para seleccionar una imagen diferente</string>
-    <string name="pride_select_up_to_4">Selecciona hasta 4 banderas para añadir a tu foto de perfil</string>
-    <string name="pride_selected_flags">Banderas Seleccionadas</string>
-    <string name="pride_my_custom">Mi Bandera Personalizada</string>
-    <string name="pride_flags_section">Bandera Pride</string>
-    <string name="pride_layout_subtitle">Selecciona cómo deben posicionarse las banderas en tu imagen</string>
-    <string name="pride_layout_circle">Círculo</string>
-    <string name="pride_layout_circle_desc">Aplicar bandera como borde circular alrededor de la imagen</string>
-    <string name="pride_layout_square">Cuadrado</string>
-    <string name="pride_layout_square_desc">Aplicar bandera como borde cuadrado alrededor de la imagen</string>
-    <string name="pride_layout_background">Fondo</string>
-    <string name="pride_layout_background_desc">Combinar la transparencia de la imagen original con la bandera</string>
-    <string name="pride_design_subtitle">Selecciona el estilo visual para tus banderas Pride</string>
-    <string name="pride_image_zoom">Zoom de Imagen</string>
-    <string name="image_scale">Escala de Imagen</string>
-    <string name="pride_default_zoom">Zoom de Imagen Predeterminado</string>
-    <string name="pride_default_ring">Escala de Imagen Predeterminada</string>
-    <string name="pride_center_image">Centrar Posición de la Imagen</string>
-    <string name="pride_flag_mode_ring">Modo Bandera: Imagen</string>
-    <string name="pride_previous"> Anterior</string>
-    <string name="pride_start_over">Empezar de Nuevo</string>
-    <string name="pride_continue">Continuar</string>
-    <string name="pride_create_another">Crear Otro</string>
-    <string name="pride_my_work">Mi Trabajo</string>
-    <string name="pride_center">Centro</string>
-    <string name="pride_create_custom_flag">Crear Bandera Personalizada</string>
-    <string name="pride_flag_name">Nombre de la Bandera</string>
-    <string name="pride_enter_name">Ingresa el Nombre</string>
-    <string name="pride_colors">Colores</string>
-    <string name="pride_create">Crear</string>
-    <string name="pride_select_at_least_one">Por favor selecciona al menos una bandera</string>
-    <string name="pride_max_colors_reached">Máximo de 10 colores permitidos</string>
-    <string name="my_pride">Mi Pride</string>
-    <string name="play">JUGAR</string>
-    <string name="tv_cosplay">RULETA DE LA SUERTE</string>
-    <string name="random">MEZCLA RÁPIDA</string>
+    <string name="play">COUPLE \nMAKER</string>
+    <string name="tv_cosplay">COSPLAY</string>
+    <string name="random">ALEATORIO</string>
     <string name="creation">CREACIÓN</string>
     <string name="back">ATRÁS</string>
     <string name="hello_world_hint">¡Hola Mundo !!</string>
@@ -182,6 +123,9 @@
     <string name="click_the_random_button_below_to_see_what_your_character_is">¡Haz clic en el botón aleatorio de abajo para ver cuál es tu personaje!</string>
     <string name="next_intro">Siguiente</string>
     <string name="color_text">Color</string>
-    <string name="playcos">PLAY</string>
-    <string name="try_again">TRY AGAIN</string>
+    <string name="playcos">JUGAR</string>
+    <string name="try_again">INTENTAR DE NUEVO</string>
+    <string name="instruction">INSTRUCCIÓN</string>
+    <string name="guide_cosplay">Los jugadores reciben una imagen de referencia aleatoria y deben recrear el personaje eligiendo peinados, atuendos, colores y accesorios que coincidan. Cada elección correcta aumenta el porcentaje de puntuación: cuanto más se asemeje el personaje a la imagen, mayor será la puntuación final.</string>
+    <string name="stop">DETENER</string>
 </resources>

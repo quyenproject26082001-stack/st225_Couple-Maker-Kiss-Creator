@@ -23,6 +23,7 @@ import com.temp.core.utils.key.IntentKey
 import com.temp.core.utils.key.RequestKey
 import com.temp.core.utils.state.HandleState
 import com.temp.databinding.ActivityCosplaySuccessfulBinding
+import com.temp.ui.home.HomeActivity
 import com.temp.ui.permission.PermissionViewModel
 import com.temp.ui.success.SuccessViewModel
 import kotlinx.coroutines.launch
@@ -65,13 +66,23 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
     override fun viewListener() {
         binding.apply {
             actionBar.btnActionBarLeftText.tap { handleBackLeftToRight() }
+            actionBar.btnActionBarRight.tap {
+                showInterAll {
+                    startIntentWithClearTop(HomeActivity::class.java)
+                }
+            }
             includeLayoutBottom.btnWhatsapp.tap(800) {
                 showInterAll {
                     startIntentWithClearTop(CosplayRandomActivity::class.java)
                 }
             }
+
+
+
             includeLayoutBottom.btnTelegram.tap(2000) {
-                checkStoragePermission()
+                viewModel.saveToAvatar(this@CosplaySuccessfulActivity) {
+                    showToast(R.string.image_has_been_saved_successfully)
+                }
             }
         }
     }
@@ -79,7 +90,7 @@ class CosplaySuccessfulActivity : BaseActivity<ActivityCosplaySuccessfulBinding>
     override fun initActionBar() {
         binding.actionBar.apply {
             btnActionBarLeftText.visible()
-            btnActionBarRight.invisible()
+            btnActionBarRight.visible()
             tvCenter.gone()
         }
     }

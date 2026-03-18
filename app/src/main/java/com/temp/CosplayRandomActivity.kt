@@ -12,6 +12,7 @@ import com.temp.core.base.BaseActivity
 import com.temp.core.extensions.gone
 import com.temp.core.extensions.handleBackLeftToRight
 import com.temp.core.extensions.invisible
+import com.temp.core.extensions.select
 import com.temp.core.extensions.showInterAll
 import com.temp.core.extensions.startIntentRightToLeft
 import com.temp.core.extensions.tap
@@ -44,6 +45,7 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
     override fun initView() {
         lifecycleScope.launch { showLoading() }
         dataViewModel.ensureData(this)
+        binding.titleGuide.select()
     }
 
     override fun dataObservable() {
@@ -60,13 +62,18 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
         binding.apply {
             btnGenerate.tap(800) { handleGenerate() }
             btnCosPlay.tap(800) { handlePlay() }
+            actionBar.btnActionBarLeftText.tap { handleBackLeftToRight() }
+            actionBar.btnActionBarRight.tap { containerGuide.visible() }
+            btnCloseGuide.tap { containerGuide.gone() }
+
         }
     }
 
     override fun initActionBar() {
         binding.actionBar.apply {
             btnActionBarLeftText.visible()
-            btnActionBarLeftText.tap { handleBackLeftToRight() }
+            btnActionBarRight.setImageResource(R.drawable.ic_guide)
+            btnActionBarRight.visible()
         }
     }
 

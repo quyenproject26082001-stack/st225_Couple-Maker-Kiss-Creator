@@ -82,7 +82,7 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
                     tvShare.setText(R.string.edit)
                     btnWhatsapp.apply {
                         visible()
-                        imgBgBtnWhatsapp.setImageResource(R.drawable.bg_btn_edit_view)
+                        imgBgBtnWhatsapp.setImageResource(R.drawable.bg_btn_edit)
                         layoutParams = layoutParams.apply {
                             width = ViewGroup.LayoutParams.MATCH_PARENT
                         }

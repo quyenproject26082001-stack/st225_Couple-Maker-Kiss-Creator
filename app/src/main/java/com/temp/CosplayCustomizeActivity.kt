@@ -97,7 +97,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
             btnWooman.tap(300) { handleGenderSwitch(2) }
             actionBar.apply {
                 btnActionBarLeftText.tap { confirmExit() }
-                btnActionBarRight.tap(800) { navigateToSuccess() }
+                btnActionBarRightText.tap(800) { navigateToSuccess() }
             }
         }
         handleAdapters()
@@ -106,10 +106,11 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
     override fun initActionBar() {
         binding.actionBar.apply {
             btnActionBarLeftText.visible()
-            setImageActionBar(btnActionBarRight, R.drawable.ic_close_image)
             tvCenter.gone()
+
             btnActionBarCenter.invisible()
-            btnActionBarRightText.gone()
+            btnActionBarRightText.visible()
+            tvRightText.setText(R.string.stop)
         }
     }
 

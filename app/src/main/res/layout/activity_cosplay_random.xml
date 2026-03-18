@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app"
-    tools:context=".ui.trending.TrendingActivity">
+    tools:context=".CosplayRandomActivity">
 
     <!-- layoutActionBar -->
     <FrameLayout
@@ -19,14 +19,67 @@
             layout="@layout/layout_actionbar" />
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/bg_cvimage"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-
-        android:background="@drawable/bg_cus"
+    
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="312dp"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="2dp"
+        android:id="@+id/containerGuide"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cvImage" />
+        app:layout_constraintVertical_bias="0.4"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/titleGuide"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="16sp"
+            style="@style/single_marquee"
+            android:elevation="3dp"
+            android:paddingHorizontal="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/cherry_bomb_regular"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="78dp"
+            android:text="@string/instruction"
+            android:background="@drawable/bg_title_tv_guide"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="312dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-20dp"
+            android:id="@+id/bg_frame"
+            android:paddingTop="0dp"
+            android:text="@string/guide_cosplay"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            app:layout_constraintTop_toBottomOf="@id/titleGuide"
+            android:background="@drawable/bg_frame"
+            />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/bg_frame"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:elevation="3dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:id="@+id/btnCloseGuide"
+            android:background="@drawable/ic_close_image"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    cvImage-->
     <com.google.android.material.card.MaterialCardView
