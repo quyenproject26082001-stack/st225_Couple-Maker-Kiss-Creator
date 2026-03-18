@@ -59,7 +59,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
 
     override fun initView() {
         initRcv()
-        binding.tvCountDown.text = "01:00"
+        binding.tvCountDown.text = "30:00"
         lifecycleScope.launch { showLoading() }
         dataViewModel.ensureData(this)
     }
@@ -343,7 +343,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
     private fun startCountdown() {
         countdownJob?.cancel()
         countdownJob = lifecycleScope.launch {
-            var secondsLeft = 60
+            var secondsLeft = 1800
             while (secondsLeft >= 0) {
                 val m = secondsLeft / 60
                 val s = secondsLeft % 60

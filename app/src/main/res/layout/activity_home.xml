@@ -147,6 +147,8 @@
                 android:gravity="center"
                 android:text="@string/random"
                 android:textColor="#ffffff"
+
+                style="@style/single_marquee"
                 android:textSize="32sp"
                 android:layout_marginTop="0dp"
                 android:layout_marginStart="-10dp"

@@ -2,6 +2,7 @@ package com.temp.core.base
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
@@ -77,6 +78,8 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
         dataObservable()
         viewListener()
         initActionBar()
+        findViewById<TextView>(R.id.tvLeftText)?.isSelected = true
+        findViewById<TextView>(R.id.tvRightText)?.isSelected = true
         initText()
     }
 

@@ -128,18 +128,19 @@
         app:layout_constraintTop_toBottomOf="@id/glHorizontal" />
 
 
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:id="@+id/progressContainer"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
         android:visibility="visible"
-        app:cardCornerRadius="28dp"
+        android:background="@drawable/bg_progress_container1"
+        android:foreground="@drawable/bg_progress_container"
+        android:clipToOutline="true"
+        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/containerBtnSamplePhoto"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/containerBtnSamplePhoto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/containerBtnSamplePhoto"
-        app:strokeColor="#861629">
+        app:layout_constraintTop_toTopOf="@+id/containerBtnSamplePhoto">
 
         <ImageView
             android:id="@+id/progressBar"
@@ -147,11 +148,9 @@
             android:layout_height="24dp"
             android:layout_gravity="center"
             android:background="@drawable/bg_progress"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@id/btnMan"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:scaleType="fitXY" />
 
-    </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tvThumbProgress"

@@ -45,6 +45,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
         binding.tv1.isSelected = true
       //  binding.tv3.isSelected = true
         binding.tv2.isSelected = true
+        binding.tv3.isSelected = true
         binding.btnSettings.setImageResource(R.drawable.ic_setting)
 
         // Apply elastic bounce animation to app name
