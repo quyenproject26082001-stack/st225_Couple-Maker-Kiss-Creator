@@ -378,6 +378,10 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
                     ""
                 }
             }
+            val currentSuggestion = viewModel.getSuggestionList().apply {
+                pathInternalRandom = suggestionModel.pathInternalRandom
+            }
+            MediaHelper.writeModelToFile(this@CosplayCustomizeActivity, ValueKey.SUGGESTION_FILE_INTERNAL, currentSuggestion)
             dismissLoading()
             val intent = Intent(this@CosplayCustomizeActivity, CosplaySuccessfulActivity::class.java).apply {
                 putExtra(IntentKey.INTENT_KEY, savedPath)
