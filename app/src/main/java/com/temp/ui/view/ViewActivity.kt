@@ -56,8 +56,12 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
 
     override fun initView() {
         dataViewModel.ensureData(this)
-        viewModel.setPath(intent.getStringExtra(IntentKey.INTENT_KEY)!!)
-        viewModel.updateStatusFrom(intent.getIntExtra(IntentKey.STATUS_KEY, ValueKey.AVATAR_TYPE))
+        val path = intent.getStringExtra(IntentKey.INTENT_KEY)!!
+        val statusFrom = intent.getIntExtra(IntentKey.STATUS_KEY, ValueKey.AVATAR_TYPE)
+        android.util.Log.d("ViewActivity", "initView path=$path statusFrom=$statusFrom")
+        android.util.Log.d("ViewActivity", "file exists=${java.io.File(path).exists()} size=${java.io.File(path).length()}")
+        viewModel.setPath(path)
+        viewModel.updateStatusFrom(statusFrom)
         binding.includeLayoutBottom.tvShare.select()
         binding.includeLayoutBottom.tvDownload.select()
 
@@ -116,6 +120,8 @@ class ViewActivity : BaseActivity<ActivityViewBinding>() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.pathInternal.collect { path ->
+                    android.util.Log.d("ViewActivity", "collect path=$path")
+                    android.util.Log.d("ViewActivity", "file exists=${java.io.File(path).exists()} size=${java.io.File(path).length()}")
                     loadImage(this@ViewActivity, path, binding.imvImage)
                 }
             }

@@ -45,15 +45,20 @@ class SuccessViewModel : ViewModel() {
             val path = _pathInternal.value
             if (path.isEmpty()) return@launch
             withContext(Dispatchers.IO) {
+                android.util.Log.d("saveToAvatar", "pathInternal=$path")
+                android.util.Log.d("saveToAvatar", "file exists=${java.io.File(path).exists()} size=${java.io.File(path).length()}")
                 val suggestion = MediaHelper.readModelFromFile<SuggestionModel>(
                     context, ValueKey.SUGGESTION_FILE_INTERNAL
                 ) ?: SuggestionModel()
+                android.util.Log.d("saveToAvatar", "suggestion.pathInternalRandom=${suggestion.pathInternalRandom}")
+                android.util.Log.d("saveToAvatar", "suggestion.itemNavList.size=${suggestion.itemNavList.size}")
                 suggestion.pathInternalEdit = path
                 val editList = MediaHelper
                     .readListFromFile<SuggestionModel>(context, ValueKey.EDIT_FILE_INTERNAL)
                     .toCollection(ArrayList())
                 editList.add(0, suggestion)
                 MediaHelper.writeListToFile(context, ValueKey.EDIT_FILE_INTERNAL, editList)
+                android.util.Log.d("saveToAvatar", "saved OK, editList.size=${editList.size}")
             }
             onDone()
         }

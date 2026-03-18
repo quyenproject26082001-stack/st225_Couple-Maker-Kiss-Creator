@@ -368,13 +368,16 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
                 try {
                     val bitmap = BitmapHelper.createBimapFromView(binding.layoutCustomLayer)
                     var path = ""
-                    MediaHelper.saveBitmapToInternalStorage(
-                        this@CosplayCustomizeActivity, ValueKey.RANDOM_TEMP_ALBUM, bitmap
+                    MediaHelper.saveBitmapToInternalStorageZip(
+                        this@CosplayCustomizeActivity, ValueKey.DOWNLOAD_ALBUM_BACKGROUND, bitmap
                     ).collect { state ->
                         if (state is SaveState.Success) path = state.path
                     }
+                    android.util.Log.d("CosplayCustomize", "savedPath=$path")
+                    android.util.Log.d("CosplayCustomize", "file exists=${java.io.File(path).exists()} size=${java.io.File(path).length()}")
                     path
                 } catch (e: Exception) {
+                    android.util.Log.e("CosplayCustomize", "saveBitmap exception: ${e.message}")
                     ""
                 }
             }
