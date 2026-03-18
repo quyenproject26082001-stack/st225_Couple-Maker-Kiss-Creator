@@ -290,22 +290,26 @@ class CustomizeCharacterViewModel : ViewModel() {
         val isBodyLayer = positionNavSelected == _bottomNavigationList.value.firstOrNull()?.layerIndex
         val positionStartLayer = if (isBodyLayer) 1 else 2
         val randomLayer = if (isBodyLayer) {
-            if (itemNavList[positionNavSelected].size == 1) {
-                1
+            if (itemNavList[positionNavSelected].size <= positionStartLayer) {
+                positionStartLayer.coerceAtMost(itemNavList[positionNavSelected].size - 1)
             } else {
                 (positionStartLayer..<itemNavList[positionNavSelected].size).random()
             }
         } else {
-            (positionStartLayer..<itemNavList[positionNavSelected].size).random()
+            if (itemNavList[positionNavSelected].size <= positionStartLayer) {
+                positionStartLayer.coerceAtMost(itemNavList[positionNavSelected].size - 1)
+            } else {
+                (positionStartLayer..<itemNavList[positionNavSelected].size).random()
+            }
         }
 
         var randomColor: Int? = null
 
         var isMoreColors = false
 
-        if (itemNavList[positionNavSelected][positionStartLayer].listImageColor.isNotEmpty()) {
+        if (itemNavList[positionNavSelected][randomLayer].listImageColor.isNotEmpty()) {
             isMoreColors = true
-            randomColor = (0..<(itemNavList[positionNavSelected][positionStartLayer].listImageColor.size)).random()
+            randomColor = (0..<(itemNavList[positionNavSelected][randomLayer].listImageColor.size)).random()
         }
         var pathRandom = itemNavList[positionNavSelected][randomLayer].path
         setKeySelected(positionNavSelected, pathRandom)

@@ -42,7 +42,7 @@
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar"
-        app:strokeColor="#166086"
+        app:strokeColor="#861629"
         app:cardCornerRadius="4dp"
         tools:context=".ui.trending.TrendingActivity"
         >

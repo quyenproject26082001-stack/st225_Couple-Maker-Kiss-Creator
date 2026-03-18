@@ -112,6 +112,7 @@ class CosplayRandomActivity : BaseActivity<ActivityCosplayRandomBinding>() {
             currentSuggestion = suggestion
 
             val paths = suggestion.pathSelectedList.filter { it.isNotEmpty() }
+
             if (paths.isEmpty()) {
                 withContext(Dispatchers.Main) { dismissLoading() }
                 return@launch
