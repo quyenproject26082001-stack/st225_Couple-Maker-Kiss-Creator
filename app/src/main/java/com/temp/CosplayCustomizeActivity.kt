@@ -364,6 +364,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
         countdownJob?.cancel()
         lifecycleScope.launch {
             showLoading()
+          //  binding.layoutCustomLayer.background = null
             val savedPath = withContext(Dispatchers.IO) {
                 try {
                     val bitmap = BitmapHelper.createBimapFromView(binding.layoutCustomLayer)
@@ -381,6 +382,7 @@ class CosplayCustomizeActivity : BaseActivity<ActivityCosplayCustomizeBinding>()
                     ""
                 }
             }
+           // binding.layoutCustomLayer.setBackgroundResource(R.drawable.bg_4_solid_white_stroke_red)
             val currentSuggestion = viewModel.getSuggestionList().apply {
                 pathInternalRandom = suggestionModel.pathInternalRandom
             }

@@ -59,10 +59,10 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/bg_drawview"
         app:layout_constraintBottom_toTopOf="@id/containerBtnSamplePhoto"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bg_4_solid_white_stroke_red"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar" />
@@ -74,7 +74,9 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
-        android:padding="2dp"
+        android:padding="1dp"
+        android:layout_marginBottom="8dp"
+
         app:layout_constraintBottom_toTopOf="@id/containerBtnSamplePhoto"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"

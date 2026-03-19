@@ -50,7 +50,7 @@
                 android:id="@+id/lnlAddItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/transparent"
+                android:background="#DA4E65"
                 android:visibility="visible">
 
                 <ImageView

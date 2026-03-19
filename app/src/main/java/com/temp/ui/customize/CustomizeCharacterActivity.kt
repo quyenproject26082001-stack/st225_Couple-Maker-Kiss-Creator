@@ -528,7 +528,9 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
     }
 
     private fun handleSave() {
+        //binding.layoutCustomLayer.background = null
         lifecycleScope.launch(Dispatchers.IO) {
+            try {
             viewModel.saveImageFromView(this@CustomizeCharacterActivity, binding.layoutCustomLayer)
                 .collect { result ->
                     when (result) {
@@ -590,6 +592,11 @@ class CustomizeCharacterActivity : BaseActivity<ActivityCustomizeBinding>() {
                         }
                     }
                 }
+            } finally {
+//                withContext(Dispatchers.Main) {
+//                    binding.layoutCustomLayer.setBackgroundResource(R.drawable.bg_4_solid_white_stroke_red)
+//                }
+            }
         }
     }
 

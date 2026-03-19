@@ -34,12 +34,11 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/bg_drawview"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@id/containerBtnSamplePhoto"
-
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutActionBar" />
 
@@ -51,6 +50,8 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="10dp"
         android:padding="2dp"
+        android:background="@drawable/bg_4_solid_white_stroke_red"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/containerBtnSamplePhoto"
@@ -96,13 +97,13 @@
         android:id="@+id/btnMan"
         android:layout_width="64dp"
         android:layout_height="48dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="6dp"
         android:background="@drawable/selector_btn_man"
         android:elevation="1dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/glHorizontal"
+        app:layout_constraintTop_toBottomOf="@id/layoutCustomLayerBackground"
         />
     
     

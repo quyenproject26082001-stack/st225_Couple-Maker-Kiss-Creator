@@ -73,7 +73,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_drawview"
+            android:background="@drawable/bg_4_solid_white_stroke_red"
             android:scaleType="centerCrop" />
         <!--        drawView-->
         <com.temp.core.custom.drawview.DrawView
@@ -86,6 +86,7 @@
         android:id="@+id/flSave"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="1dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintDimensionRatio="1:1"
@@ -254,7 +255,7 @@
             android:layout_marginBottom="25dp"
             android:orientation="vertical"
             android:visibility="gone"
-            tools:visibility="visible">
+            tools:visibility="gone">
 
 
             <!--            rcvBackgroundImage-->
@@ -268,6 +269,8 @@
                 android:paddingBottom="80dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="5"
+                android:clipToPadding="false"
+
                 tools:itemCount="10"
                 tools:listitem="@layout/item_background_image"
                 tools:visibility="gone" />
@@ -280,13 +283,14 @@
                 android:layout_marginTop="4.5dp"
                 android:paddingHorizontal="7.5dp"
                 android:visibility="gone"
+                android:clipToPadding="false"
                 android:paddingBottom="80dp"
 
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="5"
                 tools:itemCount="10"
                 tools:listitem="@layout/item_background_color"
-                tools:visibility="visible" />
+                tools:visibility="gone" />
         </LinearLayout>
 
         <!--        lnlSticker-->
@@ -296,7 +300,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="gone"
-            tools:visibility="gone">
+            tools:visibility="visible">
 <!--            &lt;!&ndash; Title: Sticker &ndash;&gt;-->
             <TextView
                 android:id="@+id/tvTitleSticker"
@@ -318,6 +322,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="22dp"
                 android:paddingBottom="80dp"
+                android:clipToPadding="false"
+
                 android:paddingHorizontal="7.5dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="5"
@@ -355,6 +361,8 @@
                 android:layout_marginTop="11.5dp"
                 android:paddingHorizontal="7.5dp"
                 android:paddingBottom="80dp"
+                android:clipToPadding="false"
+
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="5"
                 tools:listitem="@layout/item_sticker" />
