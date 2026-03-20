@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.temp'
+    namespace 'com.couple.avatar.maker.kisscreator'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.temp"
+        applicationId "com.couple.avatar.maker.kisscreator"
         minSdk 24
         targetSdk 36
         versionCode 1

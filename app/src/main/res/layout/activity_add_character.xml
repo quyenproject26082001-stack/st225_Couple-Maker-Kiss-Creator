@@ -57,55 +57,44 @@
     </FrameLayout>
 
 
-    <!--    flSave-->
-    <FrameLayout
-        android:id="@+id/flSaveBackground"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSave"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
+        app:cardCornerRadius="4dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#861629"
+        app:cardElevation="0dp"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/flActionBar">
 
-        <!--        imvBackground-->
-        <ImageView
+        <!--    flSave-->
+        <FrameLayout
+            android:id="@+id/flSave"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_4_solid_white_stroke_red"
-            android:scaleType="centerCrop" />
-        <!--        drawView-->
-        <com.temp.core.custom.drawview.DrawView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
+            android:padding="0dp">
 
-    <!--    flSave-->
-    <FrameLayout
-        android:id="@+id/flSave"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="1dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flActionBar">
+            <!--        imvBackground-->
+            <ImageView
+                android:id="@+id/imvBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
 
-        <!--        imvBackground-->
-        <ImageView
-            android:id="@+id/imvBackground"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop" />
-        <!--        drawView-->
-        <com.temp.core.custom.drawview.DrawView
-            android:id="@+id/drawView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
+            <!--        drawView-->
+            <com.couple.avatar.maker.kisscreator.core.custom.drawview.DrawView
+                android:id="@+id/drawView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_4_corner_transparent" />
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 
 
@@ -118,7 +107,7 @@
         android:layout_marginTop="30dp"
         android:clipChildren="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flSave">
+        app:layout_constraintTop_toBottomOf="@id/cardSave">
 
         <ImageView
             android:id="@+id/bg_bg"
@@ -300,7 +289,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:visibility="gone"
-            tools:visibility="visible">
+            tools:visibility="gone">
 <!--            &lt;!&ndash; Title: Sticker &ndash;&gt;-->
             <TextView
                 android:id="@+id/tvTitleSticker"
@@ -309,7 +298,7 @@
                 android:layout_marginTop="7dp"
                 android:fontFamily="@font/cherry_bomb_regular"
                 android:gravity="center"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:text="@string/sticker"
                 android:textColor="#861629"
                 android:textSize="20sp" />
@@ -348,7 +337,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/cherry_bomb_regular"
                 android:gravity="center"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:text="@string/speech_bubbles"
                 android:textColor="#861629"
                 android:textSize="20sp" />

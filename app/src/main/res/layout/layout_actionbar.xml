@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="120dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/transparent">
 
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            tools:src="@drawable/img_app_bg" />
+             />
     </androidx.cardview.widget.CardView>
 
     <!--    tvStart-->
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnActionBarLeft" />
 
     <!--    tvCenter-->
-    <com.temp.core.custom.text.DoubleStrokeTextView
+    <com.couple.avatar.maker.kisscreator.core.custom.text.DoubleStrokeTextView
     android:id="@+id/tvCenter"
         style="@style/single_marquee"
         android:layout_width="200dp"
